@@ -1,2 +1,3 @@
-# Project-1
-This is a group project ,  i am doing with my friends
+# Project
+this is a java scrypt project
+it is a game
