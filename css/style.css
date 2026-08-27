@@ -23,6 +23,7 @@ body {
   --space-2xl: 40px;
   --space-3xl: 48px;
   --boder-primary-color: #dbcfcf;
+  --bg--food--color: rgb(170, 5, 5);
   --border-radius-xs: 4px;
   --border-radius-sm: 8px;
   --border-radius-md: 12px;
@@ -91,4 +92,64 @@ section .board {
 
 .fill {
   background-color: var(--bg-fill-color);
+}
+
+.food {
+  background-color: var(--bg--food--color);
+}
+
+.modal {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: transparent;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.modal .start-game, .modal .restart-game {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: var(--space-lg);
+}
+.modal .start-game h3, .modal .restart-game h3 {
+  font-size: 50px;
+}
+
+.btn {
+  padding: var(--space-sm) var(--space-lg);
+  border: none;
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  -webkit-transition: all ease 0.4s;
+  transition: all ease 0.4s;
+}
+
+.btn:active {
+  scale: 0.95;
+}
+
+.modal .restart-game {
+  display: none;
 }/*# sourceMappingURL=style.css.map */

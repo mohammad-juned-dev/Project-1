@@ -11,7 +11,7 @@ body {
 :root {
   // background-color
   --bg-primary-color: rgb(18, 18, 18);
-  --bg-fill-color : rgb(213, 207, 207);
+  --bg-fill-color: rgb(213, 207, 207);
 
   // text color
   --text-primary-color: rgb(210, 209, 209);
@@ -27,6 +27,9 @@ body {
 
   //boreder color
   --boder-primary-color: #dbcfcf;
+
+  //food color
+  --bg--food--color: rgb(170, 5, 5);
 
   //border radius
   --border-radius-xs: 4px;
@@ -82,20 +85,67 @@ section {
   .board {
     border: 1px solid var(--boder-primary-color);
     flex-grow: 1;
-  
+
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(30px ,1fr));
-    grid-template-rows: repeat(auto-fill,  minmax(30px ,1fr));
-   
+    grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(30px, 1fr));
   }
 }
 
- .block {
-      height: 30px;
-      width: 30px;
-      border: 1px solid var(--boder-primary-color);
-      font-size: 10px;
-    }
-.fill{
-background-color: var(--bg-fill-color);
+.block {
+  height: 30px;
+  width: 30px;
+  border: 1px solid var(--boder-primary-color);
+  font-size: 10px;
 }
+.fill {
+  background-color: var(--bg-fill-color);
+}
+
+.food {
+  background-color: var(--bg--food--color);
+}
+
+.modal {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  display: flex;
+background: transparent ;
+background: rgba(255, 255, 255, 0.2);
+backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  justify-content: center;
+  align-items: center;
+
+  .start-game , .restart-game {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--space-lg);
+
+    h3 {
+      font-size: 50px;
+    }
+
+
+  }
+}
+    .btn{
+      padding:var(--space-sm) var(--space-lg) ;
+      border: none;
+      border-radius: var(--border-radius-sm);
+      cursor: pointer;
+      transition: all ease 0.4s;
+      
+    }
+
+    .btn:active{
+      scale: 0.95;
+    }
+
+   .modal .restart-game{
+      display: none;
+    }
