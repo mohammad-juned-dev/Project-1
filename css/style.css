@@ -87,7 +87,7 @@ section .board {
   height: 30px;
   width: 30px;
   border: 1px solid var(--boder-primary-color);
-  font-size: 10px;
+  border-radius: 50%;
 }
 
 .fill {
@@ -117,7 +117,8 @@ section .board {
       -ms-flex-align: center;
           align-items: center;
 }
-.modal .start-game, .modal .restart-game {
+.modal .start-game,
+.modal .restart-game {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -133,7 +134,8 @@ section .board {
           justify-content: center;
   gap: var(--space-lg);
 }
-.modal .start-game h3, .modal .restart-game h3 {
+.modal .start-game h3,
+.modal .restart-game h3 {
   font-size: 50px;
 }
 

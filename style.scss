@@ -96,7 +96,8 @@ section {
   height: 30px;
   width: 30px;
   border: 1px solid var(--boder-primary-color);
-  font-size: 10px;
+
+  border-radius: 50%;
 }
 .fill {
   background-color: var(--bg-fill-color);
@@ -112,14 +113,15 @@ section {
   position: fixed;
   top: 0;
   display: flex;
-background: transparent ;
-background: rgba(255, 255, 255, 0.2);
-backdrop-filter: blur(5px);
+  background: transparent;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   justify-content: center;
   align-items: center;
 
-  .start-game , .restart-game {
+  .start-game,
+  .restart-game {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -129,23 +131,20 @@ backdrop-filter: blur(5px);
     h3 {
       font-size: 50px;
     }
-
-
   }
 }
-    .btn{
-      padding:var(--space-sm) var(--space-lg) ;
-      border: none;
-      border-radius: var(--border-radius-sm);
-      cursor: pointer;
-      transition: all ease 0.4s;
-      
-    }
+.btn {
+  padding: var(--space-sm) var(--space-lg);
+  border: none;
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  transition: all ease 0.4s;
+}
 
-    .btn:active{
-      scale: 0.95;
-    }
+.btn:active {
+  scale: 0.95;
+}
 
-   .modal .restart-game{
-      display: none;
-    }
+.modal .restart-game {
+  display: none;
+}
