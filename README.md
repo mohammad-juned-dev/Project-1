@@ -1,3 +1,3 @@
 # Project
-this is a java scrypt project
+this is a java script project
 it is a game
